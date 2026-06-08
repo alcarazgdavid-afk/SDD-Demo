@@ -1,0 +1,22 @@
+#!/usr/bin/env sh
+set -eu
+
+ROOT_DIR="$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)"
+FLUTTER_BIN="$ROOT_DIR/.tooling/flutter/bin/flutter"
+LOCAL_HOME="$ROOT_DIR/.tooling/home"
+
+mkdir -p "$LOCAL_HOME" "$ROOT_DIR/.tooling/pub-cache"
+
+export HOME="$LOCAL_HOME"
+export PUB_CACHE="$ROOT_DIR/.tooling/pub-cache"
+export FLUTTER_SUPPRESS_ANALYTICS=true
+export DART_SUPPRESS_ANALYTICS=true
+export PATH="$ROOT_DIR/.tooling/flutter/bin:$PATH"
+
+if [ ! -x "$FLUTTER_BIN" ]; then
+  echo "Flutter SDK not found at $FLUTTER_BIN" >&2
+  echo "Install it with: git clone --depth 1 -b stable https://github.com/flutter/flutter.git .tooling/flutter" >&2
+  exit 1
+fi
+
+exec "$FLUTTER_BIN" "$@"
