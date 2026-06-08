@@ -1,0 +1,35 @@
+{
+    "name": "GearVision",
+    "short_name": "GearVision",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#021F2A",
+    "theme_color": "#18D5D0",
+    "description": "Demo SDD de administracion de produccion industrial.",
+    "orientation": "portrait-primary",
+    "prefer_related_applications": false,
+    "icons": [
+        {
+            "src": "icons/Icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/Icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/Icon-maskable-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "icons/Icon-maskable-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ]
+}

@@ -17,8 +17,16 @@ La implementacion principal de la demo debe usar Flutter para demostrar que el m
 - No copiar codigo generado por v0/Next.js.
 - Traducir la intencion de producto y diseno del mockup a Flutter.
 - Mantener la arquitectura simple para que la demo sea rapida de explicar.
-- Evitar backend, persistencia remota o autenticacion salvo que una spec lo pida explicitamente.
+- No crear backend, persistencia remota o autenticacion salvo que el usuario cambie explicitamente esta decision.
 - Preferir componentes pequenos y legibles sobre abstracciones prematuras.
+
+## Backend
+
+Este proyecto no manejara backend.
+
+Toda la informacion necesaria para la demo debe vivir como datos mock locales dentro de la app. No crear APIs, bases de datos, servicios remotos, autenticacion, autorizacion, sincronizacion externa ni persistencia remota salvo que el usuario cambie explicitamente esta decision.
+
+Si una spec necesita simular datos, debe hacerlo con archivos Dart locales y estado en memoria.
 
 ## Calidad Minima
 
